@@ -1,0 +1,29 @@
+<admintpl file="header" />
+</head>
+<body>
+	<div class="wrap">
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="#">详情</a></li>
+		</ul>
+		<form  class="form-horizontal " >
+			<fieldset>
+				<div class="control-group">
+					<!-- <><label class="control-label">{$res['title']}</label> -->
+					<div class="controls">
+						<h3>{$res['title']}</h3>
+						<hr />
+						<p>
+							{$res['content']}
+						</p>
+					</div>
+				</div>
+
+			</fieldset>
+			<div class="form-actions">
+				<a class="btn" href="{:U('dynamic/index')}">{:L('BACK')}</a>
+			</div>
+		</form>
+	</div>
+	<script src="__PUBLIC__/js/common.js"></script>
+</body>
+</html>

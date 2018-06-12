@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{$name} {$seo_title} {$site_name}</title>
+    <meta name="keywords" content="{$seo_keywords}" />
+    <meta name="description" content="{$seo_description}">
+    <tc_include file="Public:head" />
+</head>
+<style>
+	.footerrow{
+		margin: 0 auto ;
+	}
+</style>
+<body>
+<tc_include file="Public:nav" />
+<div class="container tc-main">
+    <h2>{$name}</h2>
+    <div class="row">
+        <div class="span9">
+            <div class="">
+                <div class="list-boxes">
+                    <h2><img width="30px;" src="__TMPL__Public/tool/img/bmi.png" alt="" /> &nbsp;&nbsp;&nbsp;<a href="{:leuu('index/bmi')}">身体质量指数(BMI)</a></h2>
+                    <p>BMI[Body Mass Index] 即BMI指数，也叫身体质量指数，是衡量是否肥胖和标准体重的重要指标。适用范围：18至65岁的人士。儿童、发育中的青少年、孕妇、乳母、老人及身型健硕的运动员除外。世界卫生组织认为BMI指数保持在22左右是比较理想的</p>
+                </div>
+
+                <div class="list-boxes">
+                    <h2><img width="30px;" src="__TMPL__Public/tool/img/brm.png" alt="" /> &nbsp;&nbsp;&nbsp;<a href="{:leuu('index/brm')}">基础代谢</a></h2>
+                    <p>基础代谢率（BMR）是指人体在清醒而又极端安静的状态下，不受肌肉活动、环境温度、食物及精神紧张等影响时的能量代谢率。</p>
+                </div>
+
+                <div class="list-boxes">
+                    <h2><img width="30px;" src="__TMPL__Public/tool/img/tizhong.png" alt="" /> &nbsp;&nbsp;&nbsp;<a href="{:leuu('index/tizhong')}">标准体重</a></h2>
+                    <p>您的体重符合标准吗？使用标准体重计算器，请在下面选择您的性别，输入身高，最后计算得出标准体重。计算适用范围。</p>
+                </div>
+               
+               <div class="list-boxes">
+                    <h2><img width="30px;" src="__TMPL__Public/tool/img/water.png" alt="" /> &nbsp;&nbsp;&nbsp;<a href="{:leuu('index/water')}">补水计算器</a></h2>
+                    <p>喝多少水和体重也有关，和是否活动有关。此计算器可以根据你的体重，计算出每天你的最佳喝水量。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="span3">
+            <div class="list-boxes">
+                <h3 style="font-size: 20px;font-weight: 800;color: orange;">新手课程</h3>
+                <p>新手专题 | 郑多燕减肥操</p>
+                <p>P4P健身 | 10分钟健身</p>
+                <p>Slim in 6 | New Slim in 6</p>
+                <p>Power 90 | P90 2014</p>
+                <p>翘臀圣经 | Rockin Body</p>
+            </div>
+                
+            <div class="list-boxes">
+                <h3 style="font-size: 20px;font-weight: 800;color: orange;">进阶课程</h3>
+                <p>巴西翘臀 | Hip-Hop abs</p>
+                <p>莱美搏击操 | P90 Master</p>
+                <p>T25健身操 | 腹肌加速训练</p>
+                <p>P90X训练 | Insanity</p>
+                <p>P90X2训练 | P90X3训练</p>
+            </div>
+    </div>
+    
+    
+    
+</div>
+<tc_include file="Public:footer" />
+    
+<!-- JavaScript -->
+<tc_include file="Public:scripts" />
+</body>
+</html>

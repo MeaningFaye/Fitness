@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{$name} {$seo_title} {$site_name}</title>
+    <meta name="keywords" content="{$seo_keywords}" />
+    <meta name="description" content="{$seo_description}">
+    <tc_include file="Public:head" />
+</head>
+<style>
+	#result{
+		color: red;
+		font-weight: bold;
+	}
+	h2{
+		color: #0071CE;
+		font-weight: bold;
+	}
+	.footerrow{
+		margin: 0 auto ;
+	}
+</style>
+<body>
+<tc_include file="Public:nav" />
+<div class="container tc-main">
+    <h2>{$name}</h2>
+    <div class="row">
+        <div class="span9">
+            <div class="">
+                
+               
+                <div class="list-boxes">
+                    <h2>身体质量指数(BMI)</h2>
+                    <p>BMI[Body Mass Index] 即BMI指数，也叫身体质量指数，是衡量是否肥胖和标准体重的重要指标。适用范围：18至65岁的人士。儿童、发育中的青少年、孕妇、乳母、老人及身型健硕的运动员除外。世界卫生组织认为BMI指数保持在22左右是比较理想的</p>
+                    <p>请输入您的身高、体重：</p>
+                    <p>
+                        身高 : <input class="form-control" type="text" id="shengao" value=""> &nbsp; CM（厘米）
+                        体重 : <input class="form-control" type="text" id="tizhong" value="">&nbsp; KG（公斤） &nbsp; &nbsp;
+                         <button onclick="setData(this)" style="height:40px;background-color:#0071CE;color: #FAFAFA;" type="submit" class="btn btn-default">确定</button>
+                    </p>
+                    <p>
+                        <table class="table table-hover table-bordered table-list">
+                                <tr>
+                                    <th>成人的BMI数值 : </th>
+                                    
+                                </tr>
+                                <tr>
+                                    <td>低于18.5</td>
+                                    <td>18.5-23.9</td>
+                                    <td>24-27</td>
+                                    <td>28-32</td>
+                                    <td>高于32</td>
+                                </tr>
+                                <tr>
+                                    <td>过轻</td>
+                                    <td>正常</td>
+                                    <td>过重</td>
+                                    <td>肥胖</td>
+                                    <td>严重肥胖</td>
+                                </tr>
+                        </table>
+                    </p>
+                    <p>
+                        <span id="result"></span>
+                    </p>
+                </div>
+               
+            </div>
+            
+        </div>
+        <div class="span3">
+            <div class="list-boxes">
+                <h3 style="font-size: 20px;font-weight: 800;color: orange;">器械动作</h3>
+                <p>哑铃 杠铃 壶铃 弹力带 TRX绳 战绳</p>
+                <p>药球 瑞士球 波速球 泡沫轴 龙门架</p>
+                <p>推肩器 倒蹬机 哈克机 腿弯举机</p>
+                <p>推胸机 悍马机 夹胸器 划船机 下拉机</p>
+                <p>单杠 双杠 仰卧板 罗马椅 牧师凳</p>
+                <p>史密斯机 提踵机 地雷架 腿屈伸机</p>
+            </div>
+    </div>
+    </div>
+    
+    
+    
+</div>
+<tc_include file="Public:footer" />
+    
+<!-- JavaScript -->
+<tc_include file="Public:scripts" />
+
+<script type="text/javascript">
+        function setData(obj){
+            var num='';
+            var shengao=$("#shengao").val();
+            var tizhong=$("#tizhong").val();
+            if(tizhong =="" || shengao ==""){
+                alert("身高体重不能为空");
+            }else{
+                num=tizhong/((shengao/100)*(shengao/100));
+
+                $("#result").html("你的BMI值为 : "+num.toFixed(1));
+            }
+
+            console.log(num.toFixed(1));
+        }
+
+</script>
+</body>
+</html>

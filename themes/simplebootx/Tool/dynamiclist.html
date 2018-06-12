@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{$name} {$seo_title} {$site_name}</title>
+	<meta name="keywords" content="{$seo_keywords}" />
+	<meta name="description" content="{$seo_description}">
+    <tc_include file="Public:head" />
+</head>
+<style>
+	.footerrow{
+		margin: 0 auto ;
+	}
+</style>
+<body>
+<tc_include file="Public:nav" />
+<div class="container tc-main">
+    <h2>{$name}</h2>
+    <div class="row">
+		<div class="span9">
+			<div class="">
+				
+				<volist name="res" id="vo">
+				<div class="list-boxes">
+					<h2><a href="{:leuu('index/dynamicdetails',array('did'=>$vo['did']))}">{$vo.title}</a></h2>
+					<p>发布用户 &nbsp; :    &nbsp;{$vo['user_login']|default=$vo['mobile']} &nbsp;  &nbsp; 发布时间:&nbsp; {:date("Y-m-d H:i",$vo['addtime'])}</p>
+					
+				</div>
+				</volist>
+			</div>
+			<div class="pagination"><ul>{$lists['page']}</ul></div>
+		</div>
+
+         <div class="span3">
+            <div class="tc-box first-box">
+
+            
+            <div class="tc-box">
+                <div class="headtitle">
+                    <h2>热门动态</h2>
+                </div>
+                <div class="ranking">
+           
+                    <ul class="unstyled">
+                        <foreach name="hot" item="vo">
+                            <php>$top=$key<3?"top3":"";</php>
+                            <li class="{$top}"><i>{$key+1}</i><a title="{$vo.title}" href="{:leuu('index/dynamicdetails',array('did'=>$vo['did']))}">{$vo.title}</a></li>
+                        </foreach>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+		
+    </div>
+    
+    
+    
+</div>
+
+    <tc_include file="Public:footer" />
+<!-- JavaScript -->
+<tc_include file="Public:scripts" />
+</body>
+</html>
